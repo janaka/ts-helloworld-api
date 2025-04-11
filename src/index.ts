@@ -11,7 +11,7 @@ app.use(express.json());
 app.get('/hello', (req: Request, res: Response) => {
   const currentDateTime = new Date().toISOString();
   res.json({ 
-    message: `Hello, World! ${{currentDateTime}}`
+    message: `Hello, World! at ${currentDateTime} UTC`
   });
 });
 
