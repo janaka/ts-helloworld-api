@@ -1,0 +1,23 @@
+version: '3.8'
+name: easyrunner
+services:
+  app:
+    image: ts-helloworld-api:latest
+    ports:
+      - "8080:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - easyrunner_proxy_network
+
+networks:
+  easyrunner_proxy_network:
+    name: easyrunner_proxy_network
+    external: true
+    driver: bridge
+
+volumes:
+  caddy_data:
+  caddy_config:
