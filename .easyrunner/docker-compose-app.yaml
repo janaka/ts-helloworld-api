@@ -1,7 +1,6 @@
-version: '3.8'
 name: easyrunner
 services:
-  app:
+  hello-app:
     image: ts-helloworld-api:latest
     ports:
       - "8080:3000"
