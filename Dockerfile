@@ -7,11 +7,14 @@ WORKDIR /usr/src/app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Install dependencies
-RUN npm ci --only=production
+# Install all dependencies (including development dependencies needed for building)
+RUN npm ci
 
-# Copy built TypeScript files
-COPY dist/ ./dist/
+# Copy the source code
+COPY . .
+
+# Build the TypeScript code
+RUN npm run build
 
 # Set environment variable
 ENV NODE_ENV=production
