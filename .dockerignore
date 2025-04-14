@@ -1,5 +1,5 @@
-# Source code (we only need the compiled code)
-src/
+# we only want the source code
+dist/
 
 # Git files
 .git
@@ -18,10 +18,6 @@ yarn-error.log
 # Environment variables
 .env
 .env.*
-
-# Build files not needed for container
-tsconfig.json
-*.tsbuildinfo
 
 # Documentation and other files
 *.md

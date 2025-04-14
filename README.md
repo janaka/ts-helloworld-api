@@ -38,6 +38,11 @@ docker build -t ts-helloworld-api .
 docker run -p 3000:3000 ts-helloworld-api
 ```
 
+## Debug docker build
+
+`docker build --no-cache --progress=plain -t ts-helloworld-api .`
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
