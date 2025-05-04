@@ -1,7 +1,7 @@
 name: easyrunner
 services:
   hello-app:
-    image: ts-helloworld-api:latest
+    image: localhost/ts-helloworld-api:latest
     ports:
       - "3000:3000"
     environment:
